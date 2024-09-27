@@ -1,0 +1,1003 @@
+fileFormatVersion: 2
+guid: ab8f0cc906e8fb4439656e0a3429a15f
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Weapons survival pack sheet_0
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 171
+        width: 32
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9630fc66d76bbd54b87b4b7ca67bfe1c
+      internalID: -1017416755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapons survival pack sheet_1
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 177
+        width: 7
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f3239575967f904cb869f225675a76e
+      internalID: 1627085684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapons survival pack sheet_2
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 177
+        width: 7
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41059954691f50642a3525a1e8d29164
+      internalID: -1312040794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapons survival pack sheet_3
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 144
+        width: 12
+        height: 48
+      alignment: 9
+      pivot: {x: 0.37223372, y: 0.14864223}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00e00a1edd81d7242ad6af226a1d55ae
+      internalID: 1184376697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapons survival pack sheet_4
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 145
+        width: 13
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 122d2c07542ef5d489af00338ac0d1ad
+      internalID: 190059576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapons survival pack sheet_5
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 153
+        width: 13
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1244ceb6926b3c449a7678b75ae41c7a
+      internalID: -1752471076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapons survival pack sheet_6
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 171
+        width: 94
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28bd481133b0cfa4aaf0d9b24cfbae43
+      internalID: -1027899913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapons survival pack sheet_7
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 169
+        width: 14
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbf22d9f3ae56674fb872c16140e83b3
+      internalID: -1263768664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapons survival pack sheet_8
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 146
+        width: 25
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c07c5048f83c3d244b1fba135b6c84b2
+      internalID: 875974354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapons survival pack sheet_9
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 154
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f0a03e505473f743831d969283e7a1e
+      internalID: -1319350535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapons survival pack sheet_10
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 154
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b53304753d179b94fa7ffa7080f131d7
+      internalID: 809481695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapons survival pack sheet_11
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 146
+        width: 7
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6862d6d6b95421040a317dd54009efc6
+      internalID: -645167303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapons survival pack sheet_12
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 146
+        width: 7
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e2371aea90607840b2a76ef1f1bde75
+      internalID: 1395233604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapons survival pack sheet_13
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 150
+        width: 24
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 539ccb9de65efa4439637088b69d781a
+      internalID: 1746301355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapons survival pack sheet_14
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 146
+        width: 7
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c75c128144e99074188b6a83ddbe2a58
+      internalID: -966996088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapons survival pack sheet_15
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 146
+        width: 7
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4958cf5d8bf941b469728cd87ec2fb1c
+      internalID: 2013307701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapons survival pack sheet_16
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 146
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8702a9ad8fabb441bf1295fd5ac5ec9
+      internalID: -315559684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapons survival pack sheet_17
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 109
+        width: 66
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2874c10a7c4f7344ba9d6bdc316ec4c4
+      internalID: 1601118585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapons survival pack sheet_18
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 98
+        width: 5
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 772ce0a76694ef843943e6accde357ca
+      internalID: 1770988686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapons survival pack sheet_19
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 98
+        width: 5
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 585f0af7117994349b4570d5cc071152
+      internalID: 557508313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapons survival pack sheet_20
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 98
+        width: 5
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0a568dfd5a40b44db916b59f30c7c06
+      internalID: 72091706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapons survival pack sheet_21
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 120
+        width: 94
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7add590570c7fe54aafc9155ef1c5df8
+      internalID: -175344176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapons survival pack sheet_22
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 96
+        width: 12
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 157173cb1c6f51f478646efd98d959c6
+      internalID: -1681182426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapons survival pack sheet_23
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 80
+        width: 66
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3a4acc66653d3845b5cdaf2eb876b28
+      internalID: 515197251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapons survival pack sheet_24
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 99
+        width: 7
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77e41a2f15a198f48a711ef27cd682e6
+      internalID: 826400949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapons survival pack sheet_25
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 99
+        width: 7
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8694b7073fa74a344a9d2e00b5a708fe
+      internalID: -1936737468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapons survival pack sheet_26
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 99
+        width: 7
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 695507a51c64bbd47a31b1d21c3134d6
+      internalID: -1910171483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapons survival pack sheet_27
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 79
+        width: 69
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef5a41702890b734f80548332d293a31
+      internalID: -1547294579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapons survival pack sheet_28
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 76
+        width: 5
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2aff981a1c07cac478ccd54c8d48db8b
+      internalID: -1330365312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapons survival pack sheet_29
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 76
+        width: 5
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1f70c7a11d07ed4997a1c12fac2fef9
+      internalID: -1964663416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapons survival pack sheet_30
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 75
+        width: 7
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67a06398064b63b47b67cd7f43353ade
+      internalID: -1932157367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapons survival pack sheet_31
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 75
+        width: 7
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a745e4ae268464b4e8bd271abc7103fc
+      internalID: -1305263923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapons survival pack sheet_32
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 75
+        width: 7
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ed55d166ff0aaf43a275ea0cac48e62
+      internalID: -171321558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapons survival pack sheet_33
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 51
+        width: 92
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ca3fb285c921154c855fbea5c8e02b2
+      internalID: 729090769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapons survival pack sheet_34
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 52
+        width: 5
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9db5d066afb2c341916f4672d26d303
+      internalID: -1243783694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapons survival pack sheet_35
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 52
+        width: 5
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 473098731b9c8864892f6d9afaa32805
+      internalID: 367616922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapons survival pack sheet_36
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 52
+        width: 5
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 303e3259fa1392e4a8abb33530da3397
+      internalID: -977436807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapons survival pack sheet_37
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 52
+        width: 5
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 737a9335770d329439a2cfad9b543173
+      internalID: -1111079894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapons survival pack sheet_38
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 51
+        width: 47
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86f864ec8d4d7e04a87d45a53325294d
+      internalID: 790157345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapons survival pack sheet_39
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 10
+        width: 47
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 209540ca58de8fd40bae1b9c256f0084
+      internalID: -965773035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Weapons survival pack sheet_0: -1017416755
+      Weapons survival pack sheet_1: 1627085684
+      Weapons survival pack sheet_10: 809481695
+      Weapons survival pack sheet_11: -645167303
+      Weapons survival pack sheet_12: 1395233604
+      Weapons survival pack sheet_13: 1746301355
+      Weapons survival pack sheet_14: -966996088
+      Weapons survival pack sheet_15: 2013307701
+      Weapons survival pack sheet_16: -315559684
+      Weapons survival pack sheet_17: 1601118585
+      Weapons survival pack sheet_18: 1770988686
+      Weapons survival pack sheet_19: 557508313
+      Weapons survival pack sheet_2: -1312040794
+      Weapons survival pack sheet_20: 72091706
+      Weapons survival pack sheet_21: -175344176
+      Weapons survival pack sheet_22: -1681182426
+      Weapons survival pack sheet_23: 515197251
+      Weapons survival pack sheet_24: 826400949
+      Weapons survival pack sheet_25: -1936737468
+      Weapons survival pack sheet_26: -1910171483
+      Weapons survival pack sheet_27: -1547294579
+      Weapons survival pack sheet_28: -1330365312
+      Weapons survival pack sheet_29: -1964663416
+      Weapons survival pack sheet_3: 1184376697
+      Weapons survival pack sheet_30: -1932157367
+      Weapons survival pack sheet_31: -1305263923
+      Weapons survival pack sheet_32: -171321558
+      Weapons survival pack sheet_33: 729090769
+      Weapons survival pack sheet_34: -1243783694
+      Weapons survival pack sheet_35: 367616922
+      Weapons survival pack sheet_36: -977436807
+      Weapons survival pack sheet_37: -1111079894
+      Weapons survival pack sheet_38: 790157345
+      Weapons survival pack sheet_39: -965773035
+      Weapons survival pack sheet_4: 190059576
+      Weapons survival pack sheet_5: -1752471076
+      Weapons survival pack sheet_6: -1027899913
+      Weapons survival pack sheet_7: -1263768664
+      Weapons survival pack sheet_8: 875974354
+      Weapons survival pack sheet_9: -1319350535
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
-public class PlayerController : MonoBehaviour
+public class PlayerMovementController : MonoBehaviour
 {
     [Header("Player Movement")]
     [SerializeField]
@@ -19,7 +19,6 @@ public class PlayerController : MonoBehaviour
     private int         jumpCount;
 
     private int         defaultJumpCount;
-
     private bool        isJump;
 
     private Rigidbody2D rigid;
@@ -60,7 +59,7 @@ public class PlayerController : MonoBehaviour
 
         jumpCount--;
 
-        rigid.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+        rigid.velocity = new Vector2(rigid.velocity.x, jumpForce);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
