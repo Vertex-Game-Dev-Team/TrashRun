@@ -12,7 +12,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class LogoManager : MonoBehaviour
+public class _00_Logo : MonoBehaviour
 {
     [Tooltip("로고를 넣은 차례대로 Fade되며 보여집니다.")]
     [SerializeField] private GameObject[] LogoArray;
