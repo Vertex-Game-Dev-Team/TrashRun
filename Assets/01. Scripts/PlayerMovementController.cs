@@ -66,7 +66,10 @@ public class PlayerMovementController : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Ground"))
         {
-            jumpCount = defaultJumpCount;
+            if (collision.transform.position.y + 0.5f < transform.position.y)
+            {
+                jumpCount = defaultJumpCount;
+            }
         }
     }
 }

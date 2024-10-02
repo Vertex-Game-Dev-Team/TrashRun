@@ -40,6 +40,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5855617388793041444}
     m_Modifications:
+    - target: {fileID: 1198276689446746252, guid: d447ce6215e78b549b95fa355ea60b6d, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 16b064704159e37479133969533420af, type: 2}
     - target: {fileID: 2571499964497629880, guid: d447ce6215e78b549b95fa355ea60b6d, type: 3}
       propertyPath: m_Name
       value: Test_ground (1)
