@@ -18,7 +18,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private int jumpCount;
 
-    private int defaultJumpCount;
+    private int maxJumpCount;
     private bool onJump;
     private bool isGround;
     private Collider2D bodyCollider;
@@ -30,7 +30,7 @@ public class PlayerMovement : MonoBehaviour
         bodyCollider = GetComponent<BoxCollider2D>();
         rigid = GetComponent<Rigidbody2D>();
 
-        defaultJumpCount = jumpCount;
+        maxJumpCount = jumpCount;
     }
 
     private void Update()
@@ -100,7 +100,7 @@ public class PlayerMovement : MonoBehaviour
                 isGround = true;
                 onJump = true;
 
-                jumpCount = defaultJumpCount;
+                jumpCount = maxJumpCount;
             }
         }
     }

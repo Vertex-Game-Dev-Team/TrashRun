@@ -47,14 +47,14 @@ public class PlayerJoycon : MonoBehaviour, IPointerDownHandler, IPointerUpHandle
 
     private void JoyMove()
     {
-        // 현재 마우스/터치 위치와 시작 위치의 차이 계산 (Y축)
+        // 현재 터지하고있는 위치와 클릭한 위치의 거리를 계산
         float deltaY = currentPointerPosition.y - startPointerPosition.y;
 
-        // 새로운 Y값 계산 (이동 범위 제한 포함)
+        // 기존 조이 위치 + 거리를  newYPosition에 저장
         float newYPosition = Mathf.Clamp(defaultJoyPosition.y + deltaY, defaultJoyPosition.y - joyRangeY, defaultJoyPosition.y + joyRangeY);
 
-        // 조이콘 위치 업데이트 (X축은 그대로, Y축만 이동)
-        joyRect.anchoredPosition = new Vector2(defaultJoyPosition.x, newYPosition);
+        // 조이 이동
+        joyRect.anchoredPosition = new Vector2(defaultJoyPosition.x, newYPosition); 
     }
 
     public void OnPointerDown(PointerEventData eventData)
