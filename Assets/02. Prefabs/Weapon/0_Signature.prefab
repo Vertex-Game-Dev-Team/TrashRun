@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2524506732440888572}
   - component: {fileID: 3441402123981769191}
   m_Layer: 0
-  m_Name: Signature
+  m_Name: 0_Signature
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -97,9 +97,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13268a84f10630a4ba42a0ea6dbe2a39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackCool: 0
-  gaugeRange: 0
-  attackCheckBoxOffset: {x: 0, y: 0}
-  attackCheckBoxSize: {x: 0, y: 0}
-  chargedCheckBoxOffset: {x: 0, y: 0}
-  chargedCheckBoxSize: {x: 0, y: 0}
+  attackCool: 1
+  gaugeRange: 1
+  attackCheckBoxOffset: {x: 3, y: 0}
+  attackCheckBoxSize: {x: 3, y: 3}
+  chargedCheckBoxOffset: {x: 4.5, y: 0}
+  chargedCheckBoxSize: {x: 6, y: 3}

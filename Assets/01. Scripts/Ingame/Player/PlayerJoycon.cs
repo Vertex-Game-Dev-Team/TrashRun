@@ -10,7 +10,7 @@ using UnityEngine.EventSystems;
 public class PlayerJoycon : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IDragHandler
 {
     [SerializeField] private PlayerMovement player;
-    private RectTransform joyRect;
+    [SerializeField] private RectTransform joyRect;
     private bool isThumbDown;
     private float joyRangeY = 100f; // joy의 이동범위 최소 최대 Y;
 
@@ -20,7 +20,6 @@ public class PlayerJoycon : MonoBehaviour, IPointerDownHandler, IPointerUpHandle
 
     private void Awake()
     {
-        joyRect = GetComponent<RectTransform>();
         defaultJoyPosition = joyRect.anchoredPosition; // 초기 조이콘 위치 저장
     }
 

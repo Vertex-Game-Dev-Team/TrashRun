@@ -16,18 +16,20 @@ public class PlayerWeaponButton : MonoBehaviour, IPointerDownHandler, IPointerUp
     //Â÷Áö
     private float curChargeTime;
     private float maxChargeTime = 3;
-    [SerializeField] private Image chargeGauge;
+    [SerializeField] private Image img_chargeGauge;
 
     private bool onAttack = true;
     private float maxCoolTime = 3;
-    [SerializeField] private Image coolTimeGauge;
+    [SerializeField] private Image img_coolTimeGauge;
+
+    [SerializeField] private Image img_button;
 
     private void Update()
     {
         if(isDown && !isFull)
         {
             curChargeTime += Time.deltaTime;
-            chargeGauge.fillAmount = curChargeTime / maxChargeTime;
+            img_chargeGauge.fillAmount = curChargeTime / maxChargeTime;
 
             if(curChargeTime >= maxChargeTime)
             {
@@ -36,11 +38,18 @@ public class PlayerWeaponButton : MonoBehaviour, IPointerDownHandler, IPointerUp
         }
     }
 
+    public void SetAttackCoolAndGauge(float cool, float charge)
+    {
+        maxCoolTime = cool;
+        maxChargeTime = charge;
+    }
+
     public void OnPointerDown(PointerEventData eventData)
     {
         if (!onAttack) return;
 
         isDown = true;
+        img_button.color = Color.gray;
     }
 
     public void OnPointerUp(PointerEventData eventData)
@@ -48,8 +57,9 @@ public class PlayerWeaponButton : MonoBehaviour, IPointerDownHandler, IPointerUp
         if (!onAttack) return;
 
         isDown = false;
+        img_button.color = Color.white;
 
-        chargeGauge.fillAmount = 0;
+        img_chargeGauge.fillAmount = 0;
         curChargeTime = 0;
 
         if (isFull)
@@ -69,18 +79,18 @@ public class PlayerWeaponButton : MonoBehaviour, IPointerDownHandler, IPointerUp
     {
         float time = 0;
 
-        coolTimeGauge.fillAmount = 0;
+        img_coolTimeGauge.fillAmount = 0;
         onAttack = false;
 
         while (time < maxCoolTime)
         {
             time += Time.deltaTime;
             float t = time / maxCoolTime;
-            coolTimeGauge.fillAmount = t;
+            img_coolTimeGauge.fillAmount = t;
             yield return null;
         }
 
-        coolTimeGauge.fillAmount = 1;
+        img_coolTimeGauge.fillAmount = 1;
         onAttack = true;
     }
 }
