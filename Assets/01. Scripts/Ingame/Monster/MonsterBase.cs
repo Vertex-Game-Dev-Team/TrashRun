@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class MonsterBase : MonoBehaviour
 {
-    private void Start()
+    private float hp;
+
+    public void OnHit()
     {
-        
+
     }
 }
