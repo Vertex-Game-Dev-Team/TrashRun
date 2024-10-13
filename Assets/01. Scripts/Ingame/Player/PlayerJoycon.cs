@@ -9,7 +9,7 @@ using UnityEngine.EventSystems;
 
 public class PlayerJoycon : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IDragHandler
 {
-    [SerializeField] private PlayerMovement player;
+    [SerializeField] private Player player;
     [SerializeField] private RectTransform joyRect;
     private bool isThumbDown;
     private float joyRangeY = 100f; // joy의 이동범위 최소 최대 Y;

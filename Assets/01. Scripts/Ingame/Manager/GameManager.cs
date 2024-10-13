@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
     #region player
     [SerializeField] private GameObject playerObject;
     private Player player;
-    private Vector3 playerSpawnPosition = new Vector3(-0.5f, 0.5f, 0);
+    private Vector3 playerSpawnPosition = new Vector3(-5f, 1.2f, 0);
 
     public Player Player => player;
     #endregion

@@ -15,8 +15,7 @@ public class MeleeWeapon : Weapon
     public override void Attack()
     {
         // 자식 클래스에서 구현
-
-        foreach(Collider2D collider in GetMonstersWithAttack())
+        foreach (Collider2D collider in GetMonstersWithAttack())
         {
             if(collider.transform.TryGetComponent(out MonsterBase monster))
             {
@@ -40,14 +39,14 @@ public class MeleeWeapon : Weapon
 
     protected Collider2D[] GetMonstersWithAttack()
     {
-        Collider2D[] MonsterColliders = Physics2D.OverlapBoxAll(attackCheckBoxOffset, attackCheckBoxSize, 0, LayerMask.GetMask("Monster"));
+        Collider2D[] MonsterColliders = Physics2D.OverlapBoxAll((Vector2)transform.position + attackCheckBoxOffset, attackCheckBoxSize, 0, LayerMask.GetMask("Monster"));
 
         return MonsterColliders;
     }
 
     protected Collider2D[] GetMonstersWithChargedAttack()
     {
-        Collider2D[] MonsterColliders = Physics2D.OverlapBoxAll(chargedCheckBoxOffset, chargedCheckBoxSize, 0, LayerMask.GetMask("Monster"));
+        Collider2D[] MonsterColliders = Physics2D.OverlapBoxAll((Vector2)transform.position + chargedCheckBoxOffset, chargedCheckBoxSize, 0, LayerMask.GetMask("Monster"));
 
         return MonsterColliders;
     }

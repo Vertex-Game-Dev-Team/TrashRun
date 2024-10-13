@@ -10,7 +10,7 @@ public class StageLoadManager : MonoBehaviour
     private Transform camTransform;
 
     // 청크가 생성될 위치 관리
-    private readonly int chunkSize = 24;
+    private readonly int chunkSize = 23;
     private int chunkCount = 0;
 
     // 스테이지 안의 패턴들의 갯수를 관리
@@ -65,7 +65,7 @@ public class StageLoadManager : MonoBehaviour
 
         int randomPatternId = Random.Range(0, curStageData.PatternPrefabs.Length);
         GameObject randomPatternPrefab = curStageData.PatternPrefabs[randomPatternId];
-        currentPatternPrefab = Instantiate(randomPatternPrefab, new Vector3(chunkCount * chunkSize, 0, 0), Quaternion.identity);
+        currentPatternPrefab = Instantiate(randomPatternPrefab, new Vector3(chunkCount * chunkSize, 0, 0), Quaternion.identity, transform);
     }
 
     // 새로운 스테이지로 넘어갈 때
@@ -76,6 +76,6 @@ public class StageLoadManager : MonoBehaviour
         curStageNumber++;
 
         // 스테이지를 처음 시작하는 단계에선 일반적인 바닥 생성
-        currentPatternPrefab = Instantiate(curStageData.PatternPrefabs[0], new Vector3(chunkCount * chunkSize, 0, 0), Quaternion.identity);
+        currentPatternPrefab = Instantiate(curStageData.PatternPrefabs[0], new Vector3(chunkCount * chunkSize, 0, 0), Quaternion.identity, transform);
     }
 }

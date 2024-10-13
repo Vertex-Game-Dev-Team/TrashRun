@@ -54,7 +54,7 @@ public class PlayerWeaponButton : MonoBehaviour, IPointerDownHandler, IPointerUp
 
     public void OnPointerUp(PointerEventData eventData)
     {
-        if (!onAttack) return;
+        if (!onAttack || !isDown) return;
 
         isDown = false;
         img_button.color = Color.white;
@@ -66,10 +66,12 @@ public class PlayerWeaponButton : MonoBehaviour, IPointerDownHandler, IPointerUp
         {
             isFull = false;
             // 차지 공격
+            GameManager.Instance.Weapon.ChargedAttack();
         }
         else
         {
             // 그냥 공격
+            GameManager.Instance.Weapon.Attack();
         }
 
         StartCoroutine(AttackCool());
