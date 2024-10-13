@@ -42,3 +42,21 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Background
+    uniqueID: 474760045
+    locked: 0
+  - name: Tile
+    uniqueID: 3521125479
+    locked: 0
+  - name: Warning
+    uniqueID: 3061502987
+    locked: 0
+  - name: Monster
+    uniqueID: 4018395111
+    locked: 0
+  - name: Player
+    uniqueID: 4094469155
+    locked: 0
+  - name: Weapon
+    uniqueID: 2739839477
+    locked: 0

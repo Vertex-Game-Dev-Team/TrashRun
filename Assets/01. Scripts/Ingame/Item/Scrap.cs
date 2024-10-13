@@ -51,7 +51,7 @@ public class Scrap : MonoBehaviour
 
     private void SpawnSpring()
     {
-        float randomX = Random.Range(0, 5f);
+        float randomX = Random.Range(4f, 8f);
         float randomY = Random.Range(4f, 8f);
 
         rigid.AddForce(new Vector2(randomX * 2, randomY * 2), ForceMode2D.Impulse);
@@ -69,7 +69,8 @@ public class Scrap : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Ground") && !isDroped)
         {
-            GetComponent<Rigidbody2D>().gravityScale = 0;
+            rigid.gravityScale = 0;
+            rigid.velocity = Vector2.zero;
             isDroped = true;
         }
     }

@@ -25,7 +25,6 @@ public class MonsterBase : MonoBehaviour
 
     private IEnumerator Dead()
     {
-
         spriteRenderer.sprite = hitSprtie;
         Time.timeScale = 0;
 
