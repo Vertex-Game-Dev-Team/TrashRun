@@ -32,7 +32,6 @@ public class Player : MonoBehaviour
 
     private void Awake()
     {
-        bodyCollider = GetComponent<BoxCollider2D>();
         rigid = GetComponent<Rigidbody2D>();
 
         maxJumpCount = jumpCount;
