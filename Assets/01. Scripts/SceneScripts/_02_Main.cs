@@ -40,8 +40,8 @@ public class _02_Main : MonoBehaviour
     private void Start()
     {
         txt_userName.text = saveUserData.UserName;
-        txt_coin.text = saveUserData.Coin.ToString();
-        txt_crystal.text = saveUserData.Crystal.ToString();
+        txt_coin.text = string.Format("{0:#,###}", saveUserData.Coin);
+        txt_crystal.text = string.Format("{0:#,###}", saveUserData.Crystal);
 
         DataManager.Instance.InitData();
     }
