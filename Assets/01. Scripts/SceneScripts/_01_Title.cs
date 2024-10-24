@@ -2,6 +2,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
+
 
 
 // # Unity
@@ -15,19 +17,18 @@ public class _01_Title : MonoBehaviour
 
     private void Start()
     {
-        StartCoroutine(TextFadeRepet());
+        StartCoroutine(TextFadeRepeat());
     }
 
     private void Update()
     {
         if(Input.anyKeyDown)
         {
-            DataManager.instance.Save();
             SceneManager.LoadScene(SceneNameString._02_Main);
         }
     }
 
-    private IEnumerator TextFadeRepet()
+    private IEnumerator TextFadeRepeat()
     {
         float time = 0;
         float fadeTime = 1;
@@ -61,7 +62,5 @@ public class _01_Title : MonoBehaviour
 
             yield return null;
         }
-
-
     }
 }

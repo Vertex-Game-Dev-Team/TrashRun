@@ -28,20 +28,22 @@ public class _02_Main : MonoBehaviour
     [SerializeField] private TMP_Text txt_userProfile;
 
     [SerializeField] private Button[] btns_backToMain;
+    private UserData saveUserData;
 
     private void Awake()
     {
         OnClickButttons();
+
+        saveUserData = DataManager.Instance.GetSaveUserData();
     }
 
     private void Start()
     {
-        DataManager.instance.Load();
+        txt_userName.text = saveUserData.UserName;
+        txt_coin.text = saveUserData.Coin.ToString();
+        txt_crystal.text = saveUserData.Crystal.ToString();
 
-        txt_userName.text = DataManager.instance.gameData.userName;
-        txt_coin.text = DataManager.instance.gameData.coin.ToString();
-        txt_crystal.text = DataManager.instance.gameData.crystal.ToString();
-        //txt_uesrProfile.text = DataManager.instance.gameData.uesrProfile.ToString();
+        DataManager.Instance.InitData();
     }
 
     private void OnClickButttons()

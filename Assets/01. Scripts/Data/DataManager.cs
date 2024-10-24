@@ -16,14 +16,14 @@ using Newtonsoft.Json;
 
 public class DataManager : MonoBehaviour
 {
-    public static DataManager instance;
+    public static DataManager Instance;
 
     [Header("DataManagerInfo")]
-    [SerializeField] private string filename = default;
+    private readonly string filename = "UserData";
 
-    public Data gameData = new Data();
+    private UserData gameData = new UserData();
     //데이터 생성
-    private Data resetGameData = new Data();
+    private UserData resetGameData = new UserData();
     //초기화 데이터 생성
 
     private string path = default;
@@ -31,76 +31,76 @@ public class DataManager : MonoBehaviour
     private void Awake()
     {
         #region 싱글톤
-        if (instance == null)
+        if (Instance == null)
         {
-            instance = this;
+            Instance = this;
         }
-        else if (instance != this)
+        else if (Instance != this)
         {
-            Destroy(instance.gameObject);
+            Destroy(Instance.gameObject);
         }
         DontDestroyOnLoad(this.gameObject);
         #endregion
 
         path = Application.persistentDataPath + "/";
+
+        #region TEST
+        UserData userData = new UserData();
+        userData.Crystal = 9999;
+        userData.Coin = 3333;
+        userData.UserName = "테스터";
+
+        WeaponData weaponData1 = new WeaponData();
+        weaponData1.UpgradeCount = 9;
+
+        userData.WeaponDataList[0] = weaponData1;
+
+        WeaponData weaponData4 = new WeaponData();
+        weaponData4.UpgradeCount = 3;
+
+        userData.WeaponDataList[3] = weaponData4;
+
+        gameData = userData;
+
+        InitData();
+        #endregion
     }
 
-    //데이터 저장
-    public void Save()
+    // Data를 Json 저장 및 변수에 저장
+    public void InitData()
     {
-        string data = JsonConvert.SerializeObject(gameData);
-        File.WriteAllText(path + filename, data);
+        string data = JsonConvert.SerializeObject(gameData, Formatting.Indented);
+        File.WriteAllText(path + filename + ".json", data);
+
+        data = File.ReadAllText(path + filename + ".json");
+        gameData = JsonConvert.DeserializeObject<UserData>(data);
     }
 
-    //데이터 불러오기
-    public void Load()
+    ////데이터 불러오기
+    //public void Load()
+    //{
+    //    //해당 경로에 파일이 없을때 ==> 최초 접속
+    //    if (File.Exists(path + filename))
+    //    {
+    //        string data = File.ReadAllText(path + filename + ".json");
+    //        gameData = JsonConvert.DeserializeObject<UserData>(data);
+    //    }
+    //    else
+    //    {
+    //        //저장하기
+    //        Save();
+    //    }
+    //}
+
+    public UserData GetSaveUserData()
     {
-        //해당 경로에 파일이 없을때 ==> 최초 접속
-        if (File.Exists(path + filename))
-        {
-            string data = File.ReadAllText(path + filename);
-            gameData = JsonConvert.DeserializeObject<Data>(data);
-        }
-        else
-        {
-            //저장하기
-            Save();
-        }
+        return gameData;
     }
 
     //데이터 리셋하기
     public void ResetData()
     {
         gameData = resetGameData;
-        Save();
+        InitData();
     }
 }
-
-public class Data
-{
-    //저장할 데이터
-    //Vector3, MonoBehaviour class 저장 불가
-
-    public string userName = "Dummy";
-    public int userProfile = 0;
-    public int coin = 0;
-    public int crystal = 0;
-
-    public float musicSettingValue = 100;
-    public float sfxSettingValue = 100;
-    public WeaponData[] weaponDatas = new WeaponData[2];
-
-    public Data()
-    {
-        for(int i = 0; i < weaponDatas.Length; i++)
-        {
-            weaponDatas[i] = new WeaponData();
-        }
-    }
-
-    public class WeaponData
-    {
-        public int upgradeCount = 0;
-    }
-}
-
