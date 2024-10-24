@@ -22,6 +22,7 @@ public class _01_Title : MonoBehaviour
     {
         if(Input.anyKeyDown)
         {
+            DataManager.instance.Save();
             SceneManager.LoadScene(SceneNameString._02_Main);
         }
     }

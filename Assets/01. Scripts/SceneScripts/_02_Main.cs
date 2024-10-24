@@ -1,6 +1,8 @@
 // # Systems
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
+
 
 // # Unity
 using UnityEngine;
@@ -13,18 +15,33 @@ public class _02_Main : MonoBehaviour
     [SerializeField] private GameObject pnl_weapon;
     [SerializeField] private GameObject pnl_characteristic;
     [SerializeField] private GameObject pnl_option;
-
+    [Space(20)]
     [SerializeField] private Button btn_mailbox;
     [SerializeField] private Button btn_mode;
     [SerializeField] private Button btn_weapon;
     [SerializeField] private Button btn_characteristic;
     [SerializeField] private Button btn_option;
+    [Space(20)]
+    [SerializeField] private TMP_Text txt_userName;
+    [SerializeField] private TMP_Text txt_coin;
+    [SerializeField] private TMP_Text txt_crystal;
+    [SerializeField] private TMP_Text txt_userProfile;
 
     [SerializeField] private Button[] btns_backToMain;
 
     private void Awake()
     {
         OnClickButttons();
+    }
+
+    private void Start()
+    {
+        DataManager.instance.Load();
+
+        txt_userName.text = DataManager.instance.gameData.userName;
+        txt_coin.text = DataManager.instance.gameData.coin.ToString();
+        txt_crystal.text = DataManager.instance.gameData.crystal.ToString();
+        //txt_uesrProfile.text = DataManager.instance.gameData.uesrProfile.ToString();
     }
 
     private void OnClickButttons()

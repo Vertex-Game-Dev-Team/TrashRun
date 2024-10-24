@@ -81,27 +81,26 @@ public class Data
     //저장할 데이터
     //Vector3, MonoBehaviour class 저장 불가
 
-    public string userName = "00000";
-    public int uesrProfile = 0;
+    public string userName = "Dummy";
+    public int userProfile = 0;
     public int coin = 0;
     public int crystal = 0;
 
     public float musicSettingValue = 100;
     public float sfxSettingValue = 100;
-    List<WeaponData> weaponDatas = new List<WeaponData>();
+    public WeaponData[] weaponDatas = new WeaponData[2];
 
     public Data()
     {
-        for(int i = 0; i < weaponDatas.Count; i++)
+        for(int i = 0; i < weaponDatas.Length; i++)
         {
-            weaponDatas.Add(new WeaponData());
+            weaponDatas[i] = new WeaponData();
         }
     }
 
     public class WeaponData
     {
-        int upgradeCount = 0;
+        public int upgradeCount = 0;
     }
-
 }
 

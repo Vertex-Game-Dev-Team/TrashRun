@@ -4388,6 +4388,10 @@ MonoBehaviour:
   btn_weapon: {fileID: 2135570420}
   btn_characteristic: {fileID: 1342880342}
   btn_option: {fileID: 1646554517}
+  txt_userName: {fileID: 1733347397}
+  txt_coin: {fileID: 683366041}
+  txt_crystal: {fileID: 92844373}
+  txt_userProfile: {fileID: 0}
   btns_backToMain:
   - {fileID: 1721184473}
   - {fileID: 553595735}
@@ -6185,7 +6189,7 @@ GameObject:
   - component: {fileID: 1274921824}
   - component: {fileID: 1274921823}
   m_Layer: 5
-  m_Name: pnl_money
+  m_Name: pnl_coin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
