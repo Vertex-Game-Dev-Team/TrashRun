@@ -23,7 +23,6 @@ public class GameManager : MonoBehaviour
     #region weapon
     [SerializeField] private GameObject[] weaponPrefabs;
     private Weapon weapon;
-    private Vector3 weaponSpawnPosition = new Vector3(-0.5f, 0.5f, 0);
 
     public Weapon Weapon => weapon;
     #endregion
@@ -36,7 +35,6 @@ public class GameManager : MonoBehaviour
 
         int weaponID = PlayerPrefs.GetInt(PlayerPrefsKey.WeaponID);
         GameObject weapon = Instantiate(weaponPrefabs[weaponID], playerObject.transform);
-        weapon.transform.localPosition = weaponSpawnPosition;
         this.weapon = weapon.GetComponent<Weapon>();
     }
 }
