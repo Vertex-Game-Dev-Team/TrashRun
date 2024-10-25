@@ -14,6 +14,8 @@ public class MeleeWeapon : Weapon
 
     public override void Attack()
     {
+        animator.SetTrigger("NormalAttack");
+
         // 자식 클래스에서 구현
         foreach (Collider2D collider in GetMonstersWithAttack())
         {
@@ -26,8 +28,9 @@ public class MeleeWeapon : Weapon
 
     public override void ChargedAttack()
     {
-        // 자식 클래스에서 구현
+        animator.SetTrigger("ChargingAttack");
 
+        // 자식 클래스에서 구현
         foreach (Collider2D collider in GetMonstersWithChargedAttack())
         {
             if (collider.transform.TryGetComponent(out MonsterBase monster))

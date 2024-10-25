@@ -16,4 +16,11 @@ public abstract class Weapon : MonoBehaviour
 
     public abstract void Attack();
     public abstract void ChargedAttack();
+
+    protected Animator animator;
+
+    private void Awake()
+    {
+        animator = GetComponentInChildren<Animator>();
+    }
 }

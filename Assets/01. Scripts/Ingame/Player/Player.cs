@@ -30,10 +30,12 @@ public class Player : MonoBehaviour
 
     private Rigidbody2D rigid;
 
+    private Animator animator;
+
     private void Awake()
     {
         rigid = GetComponent<Rigidbody2D>();
-
+        animator = GetComponent<Animator>();
         maxJumpCount = jumpCount;
     }
 
@@ -49,6 +51,7 @@ public class Player : MonoBehaviour
             Down();
         }
 
+        SetAnimParameter();
         CheckAroundScrap();
     }
 
@@ -111,6 +114,11 @@ public class Player : MonoBehaviour
                 }
             }
         }
+    }
+
+    private void SetAnimParameter()
+    {
+        animator.SetBool("IsJump", !isGround);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
