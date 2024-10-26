@@ -14,6 +14,12 @@ public class MeleeWeapon : Weapon
 
     public override void Attack()
     {
+        if (isBoost)
+        {
+            ChargedAttack();
+            return;
+        }
+
         animator.SetTrigger("NormalAttack");
 
         // 자식 클래스에서 구현

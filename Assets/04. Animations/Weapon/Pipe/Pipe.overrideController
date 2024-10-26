@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Pipe
+  m_Controller: {fileID: 9100000, guid: 94f4f78fbb09afe498e545c17e840515, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 2c1d436e70a89f647ae328cd415f2fb7, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 4899b97c2460c594ba39b7dc237398c9, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 831abbe449a007e4aa8c3eadb033039d, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: e34663a5cd807274e8e8ff1afe3a289d, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 975b10daebb4bee4c8aff0b88b0c3e07, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 975b10daebb4bee4c8aff0b88b0c3e07, type: 2}

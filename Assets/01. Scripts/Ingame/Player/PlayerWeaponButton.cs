@@ -24,8 +24,15 @@ public class PlayerWeaponButton : MonoBehaviour, IPointerDownHandler, IPointerUp
 
     [SerializeField] private Image img_button;
 
+    private bool isBoost = false;
+
     private void Update()
     {
+        if(isBoost)
+        {
+            return;
+        } 
+
         if(isDown && !isFull)
         {
             curChargeTime += Time.deltaTime;
@@ -35,6 +42,20 @@ public class PlayerWeaponButton : MonoBehaviour, IPointerDownHandler, IPointerUp
             {
                 isFull = true;
             }
+        }
+    }
+
+    public void SetBoostState(bool on)
+    {
+        isBoost = on;
+
+        if (on)
+        {
+            img_chargeGauge.fillAmount = 1;
+        }
+        else
+        {
+            img_chargeGauge.fillAmount = 0;
         }
     }
 
@@ -59,7 +80,7 @@ public class PlayerWeaponButton : MonoBehaviour, IPointerDownHandler, IPointerUp
         isDown = false;
         img_button.color = Color.white;
 
-        img_chargeGauge.fillAmount = 0;
+        if(!isBoost) img_chargeGauge.fillAmount = 0;
         curChargeTime = 0;
 
         if (isFull)

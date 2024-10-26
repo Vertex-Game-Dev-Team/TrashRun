@@ -61,6 +61,7 @@ public class Scrap : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player") && isDroped)
         {
+            GameManager.Instance.GetScrap(5);
             Destroy(gameObject);
         }
     }

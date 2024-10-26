@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c5d760ea628437c40aebb3d54a42f22a
+guid: 53eed18407b1f394ca23e0ce64c06222
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -101,17 +101,29 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Pink_Monster_Jump_8_0
+      name: Pipe 1-Sheet_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 32
-        height: 32
+        width: 125
+        height: 60
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -119,20 +131,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d0911966fc9ccd041ab2607e0129ee7d
-      internalID: 1014085715
+      spriteID: 843fca2ff921d7146b9d2d97d1d98191
+      internalID: 1675908420
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pink_Monster_Jump_8_1
+      name: Pipe 1-Sheet_1
       rect:
         serializedVersion: 2
-        x: 32
+        x: 125
         y: 0
-        width: 32
-        height: 32
+        width: 125
+        height: 60
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,20 +152,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 52c3ee6e2de801f41ad2795dac10b1f0
-      internalID: 1997670772
+      spriteID: 9dfd5f9403878484dbb0f972ce411b70
+      internalID: 606538352
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pink_Monster_Jump_8_2
+      name: Pipe 1-Sheet_2
       rect:
         serializedVersion: 2
-        x: 64
+        x: 250
         y: 0
-        width: 32
-        height: 32
+        width: 125
+        height: 60
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -161,20 +173,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: abab665ea627a9047a58ad2bab5dfcef
-      internalID: -1523506391
+      spriteID: 752b46d3789ce0f438c776c5cd7c784b
+      internalID: -1697588049
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pink_Monster_Jump_8_3
+      name: Pipe 1-Sheet_3
       rect:
         serializedVersion: 2
-        x: 96
+        x: 375
         y: 0
-        width: 32
-        height: 32
+        width: 125
+        height: 60
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -182,20 +194,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 970ca5f96d9b1c24190bca1b07467da5
-      internalID: 735533950
+      spriteID: 368bada170ffeb94dbe85d66fb0977d7
+      internalID: -753780698
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pink_Monster_Jump_8_4
+      name: Pipe 1-Sheet_4
       rect:
         serializedVersion: 2
-        x: 128
+        x: 500
         y: 0
-        width: 32
-        height: 32
+        width: 125
+        height: 60
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -203,20 +215,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c2d10ce3838920d408fb31b5a8c001e5
-      internalID: -1357478994
+      spriteID: 4c7550952c6ebd848ad56463affad8d1
+      internalID: -608381980
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pink_Monster_Jump_8_5
+      name: Pipe 1-Sheet_5
       rect:
         serializedVersion: 2
-        x: 160
+        x: 625
         y: 0
-        width: 32
-        height: 32
+        width: 125
+        height: 60
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -224,20 +236,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5c8f690b74503c847bfa2bff7600f101
-      internalID: 382647938
+      spriteID: 30a3535ead20f6544aa52d469646a83c
+      internalID: -1003368272
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pink_Monster_Jump_8_6
+      name: Pipe 1-Sheet_6
       rect:
         serializedVersion: 2
-        x: 192
+        x: 750
         y: 0
-        width: 32
-        height: 32
+        width: 125
+        height: 60
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -245,29 +257,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 19360b8bd9a8c53498b91a8f145bd289
-      internalID: 26769396
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Pink_Monster_Jump_8_7
-      rect:
-        serializedVersion: 2
-        x: 224
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 701af6cc559a5f14593d0850088bcda0
-      internalID: 26984775
+      spriteID: 8b56a1dd41a4dee4fafe49f81494209a
+      internalID: 1633040662
       vertices: []
       indices: 
       edges: []
@@ -283,14 +274,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Pink_Monster_Jump_8_0: 1014085715
-      Pink_Monster_Jump_8_1: 1997670772
-      Pink_Monster_Jump_8_2: -1523506391
-      Pink_Monster_Jump_8_3: 735533950
-      Pink_Monster_Jump_8_4: -1357478994
-      Pink_Monster_Jump_8_5: 382647938
-      Pink_Monster_Jump_8_6: 26769396
-      Pink_Monster_Jump_8_7: 26984775
+      Pipe 1-Sheet_0: 1675908420
+      Pipe 1-Sheet_1: 606538352
+      Pipe 1-Sheet_2: -1697588049
+      Pipe 1-Sheet_3: -753780698
+      Pipe 1-Sheet_4: -608381980
+      Pipe 1-Sheet_5: -1003368272
+      Pipe 1-Sheet_6: 1633040662
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

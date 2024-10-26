@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8b875e896df89a2408c409f6f7d553f0
+guid: cdcd0b7539efaa644beec7c2fe88e57a
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -101,17 +101,29 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Pink_Monster_Run_6_0
+      name: Boomerang 2-Sheet_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 32
-        height: 32
+        width: 123
+        height: 116
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -119,20 +131,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4dafe63548801fc47b02a300395e1af1
-      internalID: 2041171352
+      spriteID: 73bffe0e1951c9e479002d352083f7a9
+      internalID: 1312299331
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pink_Monster_Run_6_1
+      name: Boomerang 2-Sheet_1
       rect:
         serializedVersion: 2
-        x: 32
+        x: 123
         y: 0
-        width: 32
-        height: 32
+        width: 123
+        height: 116
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,20 +152,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9746d89778782c049ba5f2dbb6af067c
-      internalID: 584657100
+      spriteID: 1d225c4227885624db9716a51e666931
+      internalID: -1533195545
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pink_Monster_Run_6_2
+      name: Boomerang 2-Sheet_2
       rect:
         serializedVersion: 2
-        x: 64
+        x: 246
         y: 0
-        width: 32
-        height: 32
+        width: 123
+        height: 116
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -161,20 +173,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 29150fc75b4f29046a145da63f99b91e
-      internalID: -107457662
+      spriteID: 19764357904d66048829d9635afb679f
+      internalID: -748370567
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pink_Monster_Run_6_3
+      name: Boomerang 2-Sheet_3
       rect:
         serializedVersion: 2
-        x: 96
+        x: 369
         y: 0
-        width: 32
-        height: 32
+        width: 123
+        height: 116
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -182,20 +194,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ceb072959179a9943a2bcbdfdb6a67ee
-      internalID: 1084165927
+      spriteID: 1ebf1ed1c8c0681469566d139ba7b15d
+      internalID: -1858886778
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pink_Monster_Run_6_4
+      name: Boomerang 2-Sheet_4
       rect:
         serializedVersion: 2
-        x: 128
+        x: 492
         y: 0
-        width: 32
-        height: 32
+        width: 123
+        height: 116
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -203,20 +215,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 39ad37569b3769c468a7dc6a25473190
-      internalID: -1941910046
+      spriteID: a9535d8569e30c74bb3a4136f3dd5e60
+      internalID: -1292914884
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pink_Monster_Run_6_5
+      name: Boomerang 2-Sheet_5
       rect:
         serializedVersion: 2
-        x: 160
+        x: 615
         y: 0
-        width: 32
-        height: 32
+        width: 123
+        height: 116
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -224,8 +236,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 343a4d8471f9b9444a847dc75274bbdd
-      internalID: -1554870879
+      spriteID: 56cf33fa6eee7c44fafb9f2580a957b8
+      internalID: 1803396140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boomerang 2-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 738
+        y: 0
+        width: 123
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a36ca98436f48ae4e8349ca5d3f31d1d
+      internalID: -1204907894
       vertices: []
       indices: 
       edges: []
@@ -241,12 +274,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Pink_Monster_Run_6_0: 2041171352
-      Pink_Monster_Run_6_1: 584657100
-      Pink_Monster_Run_6_2: -107457662
-      Pink_Monster_Run_6_3: 1084165927
-      Pink_Monster_Run_6_4: -1941910046
-      Pink_Monster_Run_6_5: -1554870879
+      Boomerang 2-Sheet_0: 1312299331
+      Boomerang 2-Sheet_1: -1533195545
+      Boomerang 2-Sheet_2: -748370567
+      Boomerang 2-Sheet_3: -1858886778
+      Boomerang 2-Sheet_4: -1292914884
+      Boomerang 2-Sheet_5: 1803396140
+      Boomerang 2-Sheet_6: -1204907894
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

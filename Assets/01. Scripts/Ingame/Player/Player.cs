@@ -11,8 +11,10 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     [Header("Player Movement")]
-    [SerializeField]
-    private float movementSpeed;
+    [SerializeField] private float moveSpeed;
+    private float minMoveSpeed;
+    private float maxMoveSpeed; // 최대 속도는 기존 속도의  일단 두배까지
+    private bool isBoost;
 
     [Header("Player Jump")]
     [SerializeField]
@@ -37,6 +39,8 @@ public class Player : MonoBehaviour
         rigid = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         maxJumpCount = jumpCount;
+        minMoveSpeed = moveSpeed;
+        maxMoveSpeed = moveSpeed * 2;
     }
 
     private void Update()
@@ -50,6 +54,10 @@ public class Player : MonoBehaviour
         {
             Down();
         }
+        if(Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            GameManager.Instance.GetScrap(25);
+        }
 
         SetAnimParameter();
         CheckAroundScrap();
@@ -62,7 +70,7 @@ public class Player : MonoBehaviour
 
     private void Move()
     {
-        rigid.velocity = new Vector2(Vector2.right.x * movementSpeed, rigid.velocity.y);
+        rigid.velocity = new Vector2(Vector2.right.x * moveSpeed, rigid.velocity.y);
     }
 
     public void Jump()
@@ -119,6 +127,29 @@ public class Player : MonoBehaviour
     private void SetAnimParameter()
     {
         animator.SetBool("IsJump", !isGround);
+    }
+
+    public void UpSpeed(float addPercent)
+    {
+        // addPercent = 1/100 ~ 100/100
+
+        float newSpeed = minMoveSpeed + (addPercent * maxMoveSpeed);
+
+        moveSpeed = Mathf.Clamp(newSpeed, minMoveSpeed, maxMoveSpeed);
+    }
+
+    public void SetBoostState(bool on)
+    {
+        isBoost = on;
+
+        if(on)
+        {
+            moveSpeed = maxMoveSpeed;
+        }
+        else
+        {
+            moveSpeed = minMoveSpeed;
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

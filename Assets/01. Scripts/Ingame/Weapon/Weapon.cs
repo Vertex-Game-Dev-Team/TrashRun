@@ -9,15 +9,22 @@ public abstract class Weapon : MonoBehaviour
 {
     [Header("Stat")]
     [SerializeField] private float attackCool;
-    [SerializeField] private float gaugeRange;
+    [SerializeField] private float chargeGaugeRange;
 
     public float AttackCool => attackCool;
-    public float GaugeRange => gaugeRange;
+    public float ChargeGaugeRange => chargeGaugeRange;
+
+    protected bool isBoost;
 
     public abstract void Attack();
     public abstract void ChargedAttack();
 
     protected Animator animator;
+
+    public void SetBoostState(bool on)
+    {
+        isBoost = on;
+    }
 
     private void Awake()
     {

@@ -12,6 +12,8 @@ public class GameManager : MonoBehaviour
     private static GameManager instance;
     public static GameManager Instance => instance;
 
+    [SerializeField] private IngameUIMnager UIManager;
+
     #region player
     [SerializeField] private GameObject playerObject;
     private Player player;
@@ -36,5 +38,16 @@ public class GameManager : MonoBehaviour
         int weaponID = PlayerPrefs.GetInt(PlayerPrefsKey.WeaponID);
         GameObject weapon = Instantiate(weaponPrefabs[weaponID], playerObject.transform);
         this.weapon = weapon.GetComponent<Weapon>();
+    }
+
+    public void GetScrap(float value)
+    {
+        UIManager.UpGaugeValue(value);
+    }
+
+    public void SetBoostState(bool on)
+    {
+        player.SetBoostState(on);
+        weapon.SetBoostState(on);
     }
 }
