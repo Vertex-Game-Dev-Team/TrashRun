@@ -51,8 +51,8 @@ public class Scrap : MonoBehaviour
 
     private void SpawnSpring()
     {
-        float randomX = Random.Range(4f, 8f);
-        float randomY = Random.Range(4f, 8f);
+        float randomX = Random.Range(6f, 8f);
+        float randomY = Random.Range(6f, 8f);
 
         rigid.AddForce(new Vector2(randomX * 2, randomY * 2), ForceMode2D.Impulse);
     }
