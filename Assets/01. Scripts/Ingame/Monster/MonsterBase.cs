@@ -28,7 +28,7 @@ public class MonsterBase : MonoBehaviour
         spriteRenderer.sprite = hitSprtie;
         Time.timeScale = 0;
 
-        yield return new WaitForSecondsRealtime(0.1f);
+        yield return new WaitForSecondsRealtime(0.25f);
 
         Time.timeScale = 1;
         DroppedScrap();
