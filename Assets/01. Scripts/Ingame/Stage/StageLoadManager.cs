@@ -61,7 +61,13 @@ public class StageLoadManager : MonoBehaviour
                 return;
             }
         }
-        else Debug.Log("마지막스테이지입니다!!");
+        else
+        {
+            if(!GameManager.Instance.IsBoss)
+            {
+                GameManager.Instance.ChangeToBossStage();
+            }
+        }
 
         int randomPatternId = Random.Range(0, curStageData.PatternPrefabs.Length);
         GameObject randomPatternPrefab = curStageData.PatternPrefabs[randomPatternId];

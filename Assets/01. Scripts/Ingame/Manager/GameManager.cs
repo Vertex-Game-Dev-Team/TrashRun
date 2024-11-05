@@ -29,6 +29,9 @@ public class GameManager : MonoBehaviour
     public Weapon Weapon => weapon;
     #endregion
 
+    private bool isBoss;
+    public bool IsBoss => isBoss;
+
     private void Awake()
     {
         instance = this;
@@ -49,5 +52,19 @@ public class GameManager : MonoBehaviour
     {
         player.SetBoostState(on);
         weapon.SetBoostState(on);
+    }
+
+    public void ChangeToBossStage()
+    {
+        if (isBoss) return;
+
+        isBoss = true;
+
+        Camera.main.GetComponent<CameraController>().SetBossCamera();
+    }
+
+    public void ReturnAtBossStage()
+    {
+        isBoss = false;
     }
 }
