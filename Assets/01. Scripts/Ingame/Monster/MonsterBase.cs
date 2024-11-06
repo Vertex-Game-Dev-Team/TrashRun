@@ -27,11 +27,13 @@ public class MonsterBase : MonoBehaviour
 
     private IEnumerator HitStop()
     {
+        Sprite defaultSprite = spriteRenderer.sprite;
         spriteRenderer.sprite = hitSprtie;
         Time.timeScale = 0;
 
         yield return new WaitForSecondsRealtime(0.25f);
-
+        
+        spriteRenderer.sprite = defaultSprite;
         Time.timeScale = 1;
 
         if(hp <= 0)

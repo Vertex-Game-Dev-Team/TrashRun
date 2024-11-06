@@ -24,7 +24,8 @@ public class _01_Title : MonoBehaviour
     {
         if(Input.anyKeyDown)
         {
-            SceneManager.LoadScene(SceneNameString._02_Main);
+            //SceneManager.LoadScene(SceneNameString._02_Main);
+            SceneManager.LoadScene("TestMain");
         }
     }
 
