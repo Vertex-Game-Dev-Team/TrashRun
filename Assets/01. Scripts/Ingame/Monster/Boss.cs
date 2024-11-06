@@ -12,7 +12,9 @@ public class Boss : MonsterBase
 
     private Rigidbody2D rigid;
     private Animator animator;
-    [SerializeField] private GameObject spawnMonster;
+    [SerializeField] private GameObject[] spawnMonsters;
+
+    [SerializeField] private Animator warningAnim;
 
     private Coroutine mainCoroutine;
     private Coroutine moveCoroutine;
@@ -93,32 +95,41 @@ public class Boss : MonsterBase
     // 이동하면서 몬스터 소환
     private IEnumerator Pattern_1()
     {
+        unMove = true;
+
+        int rand;
+
         yield return moveCoroutine = StartCoroutine(MoveToLine(0));
-        Instantiate(spawnMonster, transform.position, Quaternion.identity);
+        rand = Random.Range(0, spawnMonsters.Length);
+        Instantiate(spawnMonsters[rand], transform.position, Quaternion.identity);
 
         yield return new WaitForSeconds(0.3f);
 
         yield return moveCoroutine = StartCoroutine(MoveToLine(1));
-        Instantiate(spawnMonster, transform.position, Quaternion.identity);
+       rand = Random.Range(0, spawnMonsters.Length);
+        Instantiate(spawnMonsters[rand], transform.position, Quaternion.identity);
 
         yield return new WaitForSeconds(0.3f);
 
         yield return moveCoroutine = StartCoroutine(MoveToLine(2));
-        Instantiate(spawnMonster, transform.position, Quaternion.identity);
+        rand = Random.Range(0, spawnMonsters.Length);
+        Instantiate(spawnMonsters[rand], transform.position, Quaternion.identity);
+
+        unMove = false;
     }
 
     private IEnumerator MoveToLine(int lineIndex)
     {
         float moveTime = 0;
         float maxTime = 0.3f;
-        float startPosY = transform.position.y;
+        Vector3 startPos = transform.position;
 
         while (moveTime < maxTime)
         {
             moveTime += Time.deltaTime;
             float t = moveTime / maxTime;
 
-            transform.position = Vector3.Lerp(new Vector3(transform.position.x, startPosY, 0), new Vector3(Camera.main.transform.position.x + 9, movePointY[lineIndex], 0), t);
+            transform.position = Vector3.Lerp(startPos, new Vector3(Camera.main.transform.position.x + 9, movePointY[lineIndex], 0), t);
 
             yield return null;
         }
@@ -136,11 +147,12 @@ public class Boss : MonsterBase
             moveTime += Time.deltaTime;
             float t = moveTime / maxTime;
 
-            transform.position = Vector3.Lerp(new Vector3(transform.position.x, startPosY, 0), new Vector3(transform.position.x, GameManager.Instance.Player.transform.position.y, 0), t);
+            transform.position = Vector3.Lerp(new Vector3(transform.position.x, startPosY, 0), new Vector3(Camera.main.transform.position.x + 9, GameManager.Instance.Player.transform.position.y, 0), t);
 
             yield return null;
         }
 
+        warningAnim.SetTrigger("Play");
         animator.SetTrigger("Pat_2");
 
         unMove = true;
@@ -148,7 +160,7 @@ public class Boss : MonsterBase
         rigid.velocity = Vector2.right * 12;
         yield return new WaitForSeconds(1f);
 
-        rigid.velocity = Vector2.left * 12;
+        rigid.velocity = Vector2.left * 20;
         yield return new WaitForSeconds(1f);
 
         moveCoroutine = StartCoroutine(ReturnTo(new Vector3(Camera.main.transform.position.x + 16, transform.position.y, 0)));
