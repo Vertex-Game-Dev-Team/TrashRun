@@ -4,26 +4,28 @@ using UnityEngine;
 
 public class MonsterBase : MonoBehaviour
 {
-    private int hp = 1;
+    protected int hp = 1;
     [SerializeField] private Sprite hitSprtie;
     private SpriteRenderer spriteRenderer;
 
     private void Awake()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
     }
 
-    public void OnHit()
+    private void Start()
+    {
+        Destroy(gameObject, 7f);
+    }
+
+    public virtual void OnHit()
     {
         hp--;
 
-        if (hp <= 0)
-        {
-            StartCoroutine(Dead());
-        }
+        StartCoroutine(HitStop());
     }
 
-    private IEnumerator Dead()
+    private IEnumerator HitStop()
     {
         spriteRenderer.sprite = hitSprtie;
         Time.timeScale = 0;
@@ -31,8 +33,12 @@ public class MonsterBase : MonoBehaviour
         yield return new WaitForSecondsRealtime(0.25f);
 
         Time.timeScale = 1;
-        DroppedScrap();
-        Destroy(gameObject);
+
+        if(hp <= 0)
+        {
+            DroppedScrap();
+            Destroy(gameObject);
+        }
     }
 
     private void DroppedScrap()
@@ -41,5 +47,12 @@ public class MonsterBase : MonoBehaviour
         {
             DroppedItemManager.Instance.SpawnScrap(transform.position);
         }
+    }
+
+    private void OnEnable()
+    {
+        if (spriteRenderer != null) return;
+
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
     }
 }

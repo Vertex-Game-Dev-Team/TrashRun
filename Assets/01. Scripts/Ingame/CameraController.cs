@@ -21,7 +21,7 @@ public class CameraController : MonoBehaviour
 
     private void Start()
     {
-        SetBossCamera();
+        //SetBossCamera();
     }
 
     private void LateUpdate()
@@ -55,18 +55,19 @@ public class CameraController : MonoBehaviour
 
         float time = 0;
 
-        while(time < 3)
+        while (time < 3)
         {
             time += Time.deltaTime;
 
             float t = time / 3;
 
             Camera.main.orthographicSize = Mathf.Lerp(nowSize, targetSize, t);
-            transform.position = new Vector3(target.position.x + offset.x, Mathf.Lerp(nowY, targetY, t),-10);
+            transform.position = new Vector3(Mathf.Lerp(target.position.x + offset.x, target.position.x + 7.5f, t), Mathf.Lerp(nowY, targetY, t),-10);
 
             yield return null;
         }
 
+        offset = new Vector2(7.5f, offset.y);
         transform.position = new Vector3(target.position.x + offset.x, targetY, -10);
         Camera.main.orthographicSize = targetSize;
 

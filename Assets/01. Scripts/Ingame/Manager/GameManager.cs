@@ -29,8 +29,12 @@ public class GameManager : MonoBehaviour
     public Weapon Weapon => weapon;
     #endregion
 
+    #region monster
+    [SerializeField] private GameObject bossPrefab;
+
     private bool isBoss;
     public bool IsBoss => isBoss;
+    #endregion
 
     private void Awake()
     {
@@ -41,6 +45,11 @@ public class GameManager : MonoBehaviour
         int weaponID = PlayerPrefs.GetInt(PlayerPrefsKey.WeaponID);
         GameObject weapon = Instantiate(weaponPrefabs[weaponID], playerObject.transform);
         this.weapon = weapon.GetComponent<Weapon>();
+    }
+
+    private void Start()
+    {
+        ChangeToBossStage();
     }
 
     public void GetScrap(float value)
@@ -57,6 +66,10 @@ public class GameManager : MonoBehaviour
     public void ChangeToBossStage()
     {
         if (isBoss) return;
+
+        Vector3 spawnPos = new Vector3(Camera.main.transform.position.x + 16, 3f, 0);
+
+        GameObject boss = Instantiate(bossPrefab, spawnPos, Quaternion.identity);
 
         isBoss = true;
 
