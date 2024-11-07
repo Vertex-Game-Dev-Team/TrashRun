@@ -372,7 +372,7 @@ GameObject:
   - component: {fileID: 258275230889335961}
   - component: {fileID: 5904646232662934390}
   m_Layer: 5
-  m_Name: Image
+  m_Name: hp value
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -560,6 +560,7 @@ MonoBehaviour:
   - {fileID: 5363549575925025974, guid: 75e1f53f40ff7ae49a2f2cb37721e98a, type: 3}
   - {fileID: 7380354313567270495, guid: e359f58db29be1d4cb368a7113927559, type: 3}
   warningAnim: {fileID: 3814668414787770240}
+  img_slider: {fileID: 5904646232662934390}
 --- !u!1 &8456470825217090510
 GameObject:
   m_ObjectHideFlags: 0

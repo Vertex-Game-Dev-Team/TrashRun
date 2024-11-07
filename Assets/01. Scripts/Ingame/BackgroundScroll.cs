@@ -17,7 +17,7 @@ public class BackgroundScroll : MonoBehaviour
             backgrounds[i].Translate(Vector2.left * speed);
             if (backgrounds[i].localPosition.x <= -39)
             {
-                backgrounds[i].localPosition = new Vector3(39, -2.8f, 0);
+                backgrounds[i].localPosition = new Vector3(39, -2.8f, 10);
             }
         }
     }

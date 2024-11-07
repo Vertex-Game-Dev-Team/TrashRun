@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Boss : MonsterBase
 {
@@ -9,6 +10,7 @@ public class Boss : MonsterBase
     private float[] movePointY = { 3, 6, 9, 12 };
 
     private bool unMove;
+    private int maxHp;
 
     private Rigidbody2D rigid;
     private Animator animator;
@@ -19,17 +21,25 @@ public class Boss : MonsterBase
     private Coroutine mainCoroutine;
     private Coroutine moveCoroutine;
 
+    [SerializeField] private Image img_slider;
+
     private void Awake()
     {
         animator = GetComponent<Animator>();
         rigid = GetComponent<Rigidbody2D>();
 
         hp = 10;
+        maxHp = hp;
     }
 
     private void Start()
     {
         mainCoroutine = StartCoroutine(PatternCycle());
+    }
+
+    private void Update()
+    {
+        img_slider.fillAmount = (float)hp / (float)maxHp;
     }
 
     private void FixedUpdate()

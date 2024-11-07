@@ -36,6 +36,8 @@ public class GameManager : MonoBehaviour
     public bool IsBoss => isBoss;
     #endregion
 
+    [SerializeField] private Animator hitAnim;
+
     private void Awake()
     {
         instance = this;
@@ -45,11 +47,6 @@ public class GameManager : MonoBehaviour
         int weaponID = PlayerPrefs.GetInt(PlayerPrefsKey.WeaponID);
         GameObject weapon = Instantiate(weaponPrefabs[weaponID], playerObject.transform);
         this.weapon = weapon.GetComponent<Weapon>();
-    }
-
-    private void Start()
-    {
-        ChangeToBossStage();
     }
 
     public void GetScrap(float value)
@@ -73,11 +70,17 @@ public class GameManager : MonoBehaviour
 
         isBoss = true;
 
-        Camera.main.GetComponent<CameraController>().SetBossCamera();
+        Camera.main.transform.parent.GetComponent<CameraController>().SetBossCamera();
     }
 
     public void ReturnAtBossStage()
     {
         isBoss = false;
+    }
+
+    public void PlayerHit()
+    {
+        Camera.main.transform.GetComponent<CameraShake>().StartShake(0.3f);
+        hitAnim.SetTrigger("Play");
     }
 }

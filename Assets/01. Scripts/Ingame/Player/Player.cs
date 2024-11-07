@@ -164,10 +164,12 @@ public class Player : MonoBehaviour
                 jumpCount = maxJumpCount;
             }
         }
-
-        if(collision.gameObject.CompareTag("Monster"))
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Monster"))
         {
-
+            GameManager.Instance.PlayerHit();
         }
     }
 }
