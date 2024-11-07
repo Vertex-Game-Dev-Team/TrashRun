@@ -11,6 +11,8 @@ public class IngameUIMnager : MonoBehaviour
 {
     [SerializeField] private PlayerJoycon joycon;
     [SerializeField] private PlayerWeaponButton weaponButton;
+    [SerializeField] private GameObject boostBorder;
+
     public PlayerWeaponButton WeaponButton => weaponButton;
     private Weapon myWeapon;
     [SerializeField] private TMP_Text txt_gaugeUpSize;
@@ -49,7 +51,7 @@ public class IngameUIMnager : MonoBehaviour
             xValue = 0;
             curBoostValue = maxBoostValue;
             if (!isBoost)
-            {
+            {   
                 isBoost = true;
                 StartCoroutine(Co_Boosting());
             }
@@ -61,6 +63,10 @@ public class IngameUIMnager : MonoBehaviour
         weaponButton.SetBoostState(true);
         weaponButton.SetAttackCoolAndGauge(myWeapon.AttackCool * 1 / 4, 0);
         GameManager.Instance.SetBoostState(true);
+        boostBorder.gameObject.SetActive(true);
+
+        GameManager.Instance.Player.boostEffect = Instantiate(EffectManager.instance.boostEffect, GameManager.Instance.Player.boostEffectPos.position, Quaternion.identity);
+        GameManager.Instance.Player.boostEffect.transform.SetParent(GameManager.Instance.Player.transform);
 
         while (isBoost)
         {
@@ -75,6 +81,9 @@ public class IngameUIMnager : MonoBehaviour
 
             yield return null;
         }
+
+        Destroy(GameManager.Instance.Player.boostEffect);
+        boostBorder.gameObject.SetActive(false);
 
         boostGauge.fillAmount = 0;
         weaponButton.SetBoostState(false);

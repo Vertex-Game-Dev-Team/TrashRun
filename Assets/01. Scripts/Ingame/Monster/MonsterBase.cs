@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using USF.Manager.SoundManager;
 
 public class MonsterBase : MonoBehaviour
 {
@@ -30,6 +31,8 @@ public class MonsterBase : MonoBehaviour
         Sprite defaultSprite = spriteRenderer.sprite;
         spriteRenderer.sprite = hitSprtie;
         spriteRenderer.color = Color.red;
+
+        Instantiate(EffectManager.instance.boomEffect, transform.position, Quaternion.identity);
         Time.timeScale = 0;
 
         yield return new WaitForSecondsRealtime(0.15f);
@@ -40,7 +43,11 @@ public class MonsterBase : MonoBehaviour
 
         if(hp <= 0)
         {
+            SoundManager.instance.PlaySFX("MonsterDie");
+
             DroppedScrap();
+
+            yield return new WaitForSeconds(0.1f);
             Destroy(gameObject);
         }
     }

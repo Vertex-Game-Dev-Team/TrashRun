@@ -27,6 +27,11 @@ public class Player : MonoBehaviour
     private bool isGround;
     [SerializeField] private Collider2D bodyCollider;
 
+    [Header("Particle Effect")]
+    public GameObject boostEffect;
+    public Transform boostEffectPos;
+    public GameObject thumbEffect;
+
     private Vector2 ScrapCheckerOffset = new Vector2(-1, 0);
     private Vector2 ScrapCheckerSize = new Vector2(7, 3);
 

@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting;
-
+using EasyTransition;
 
 
 // # Unity
@@ -15,6 +15,8 @@ public class _01_Title : MonoBehaviour
 {
     [SerializeField] private TMP_Text txt_TouchToStart;
 
+    public TransitionSettings transitionSettings;
+
     private void Start()
     {
         StartCoroutine(TextFadeRepeat());
@@ -25,7 +27,7 @@ public class _01_Title : MonoBehaviour
         if(Input.anyKeyDown)
         {
             //SceneManager.LoadScene(SceneNameString._02_Main);
-            SceneManager.LoadScene("TestMain");
+            TransitionManager.Instance().Transition("TestMain", transitionSettings, 0);
         }
     }
 

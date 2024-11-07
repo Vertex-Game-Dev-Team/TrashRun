@@ -7,6 +7,7 @@ using Unity.VisualScripting;
 // # Unity
 using UnityEngine;
 using UnityEngine.UIElements;
+using USF.Manager.SoundManager;
 
 public class Scrap : MonoBehaviour
 {
@@ -62,6 +63,10 @@ public class Scrap : MonoBehaviour
         if (collision.gameObject.CompareTag("Player") && isDroped)
         {
             GameManager.Instance.GetScrap(5);
+            GameObject clone = Instantiate(EffectManager.instance.dropEffect, GameManager.Instance.Player.boostEffectPos.position, Quaternion.identity);
+            clone.transform.SetParent(GameManager.Instance.Player.transform);
+            SoundManager.instance.PlaySFX("Coin");
+
             Destroy(gameObject);
         }
     }

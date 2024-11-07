@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using USF.Manager.SoundManager;
 
 public class PlayerWeaponButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
@@ -41,6 +42,15 @@ public class PlayerWeaponButton : MonoBehaviour, IPointerDownHandler, IPointerUp
 
     private void Update()
     {
+        if(isFull)
+        {
+            GameManager.Instance.Player.thumbEffect.SetActive(true);
+        }
+        else
+        {
+            GameManager.Instance.Player.thumbEffect.SetActive(false);
+        }
+
         if (Input.GetKeyDown(KeyCode.J))
         {
             ThumbsDown();
@@ -126,6 +136,13 @@ public class PlayerWeaponButton : MonoBehaviour, IPointerDownHandler, IPointerUp
             // 그냥 공격
             GameManager.Instance.Weapon.Attack();
         }
+
+        int id = PlayerPrefs.GetInt(PlayerPrefsKey.WeaponID);
+
+        if (id == 0) SoundManager.instance.PlaySFX("Pipe");
+        if (id == 1) SoundManager.instance.PlaySFX("Bat");
+        else  if(id == 2) SoundManager.instance.PlaySFX("booo");
+
 
         StartCoroutine(AttackCool());
     }
