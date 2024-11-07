@@ -29,11 +29,13 @@ public class MonsterBase : MonoBehaviour
     {
         Sprite defaultSprite = spriteRenderer.sprite;
         spriteRenderer.sprite = hitSprtie;
+        spriteRenderer.color = Color.red;
         Time.timeScale = 0;
 
         yield return new WaitForSecondsRealtime(0.25f);
         
         spriteRenderer.sprite = defaultSprite;
+        spriteRenderer.color = Color.white;
         Time.timeScale = 1;
 
         if(hp <= 0)

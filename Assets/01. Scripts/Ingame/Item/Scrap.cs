@@ -70,9 +70,12 @@ public class Scrap : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Ground") && !isDroped)
         {
-            rigid.gravityScale = 0;
-            rigid.velocity = Vector2.zero;
-            isDroped = true;
+            if(collision.transform.position.y + 0.5 <= transform.position.y)
+            {
+                rigid.gravityScale = 0;
+                rigid.velocity = Vector2.zero;
+                isDroped = true;
+            }
         }
     }
 }
