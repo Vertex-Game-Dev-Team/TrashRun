@@ -164,5 +164,10 @@ public class Player : MonoBehaviour
                 jumpCount = maxJumpCount;
             }
         }
+
+        if(collision.gameObject.CompareTag("Monster"))
+        {
+
+        }
     }
 }

@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Ground
+  - Monster
   layers:
   - Default
   - TransparentFX
@@ -53,6 +54,9 @@ TagManager:
     locked: 0
   - name: Monster
     uniqueID: 4018395111
+    locked: 0
+  - name: Item
+    uniqueID: 1488577249
     locked: 0
   - name: Player
     uniqueID: 4094469155

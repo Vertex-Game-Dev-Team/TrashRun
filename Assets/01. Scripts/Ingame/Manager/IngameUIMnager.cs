@@ -12,6 +12,7 @@ public class IngameUIMnager : MonoBehaviour
 {
     [SerializeField] private PlayerJoycon joycon;
     [SerializeField] private PlayerWeaponButton weaponButton;
+    public PlayerWeaponButton WeaponButton => weaponButton;
     private Weapon myWeapon;
 
     private void Start()

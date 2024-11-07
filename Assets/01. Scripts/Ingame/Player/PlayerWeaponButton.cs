@@ -25,20 +25,42 @@ public class PlayerWeaponButton : MonoBehaviour, IPointerDownHandler, IPointerUp
     [SerializeField] private Image img_button;
 
     private bool isBoost = false;
+    #region test
+    [SerializeField] private SpriteRenderer weaponRenderer;
+    [SerializeField] private GameObject weaponObj;
+
+    private void Start()
+    {
+        weaponRenderer = GameManager.Instance.Weapon.GetComponentInChildren<SpriteRenderer>();
+        if(GameManager.Instance.Weapon.TryGetComponent(out RangedWeapon weapon))
+        {
+            weaponObj = weapon.transform.GetChild(0).gameObject;
+        }
+    }
+    #endregion
 
     private void Update()
     {
-        if(isBoost)
+        if (Input.GetKeyDown(KeyCode.J))
+        {
+            ThumbsDown();
+        }
+        if (Input.GetKeyUp(KeyCode.J))
+        {
+            ThumbsUp();
+        }
+
+        if (isBoost)
         {
             return;
-        } 
+        }
 
-        if(isDown && !isFull)
+        if (isDown && !isFull)
         {
             curChargeTime += Time.deltaTime;
             img_chargeGauge.fillAmount = curChargeTime / maxChargeTime;
 
-            if(curChargeTime >= maxChargeTime)
+            if (curChargeTime >= maxChargeTime)
             {
                 isFull = true;
             }
@@ -67,20 +89,30 @@ public class PlayerWeaponButton : MonoBehaviour, IPointerDownHandler, IPointerUp
 
     public void OnPointerDown(PointerEventData eventData)
     {
+        ThumbsDown();
+    }
+
+    public void OnPointerUp(PointerEventData eventData)
+    {
+        ThumbsUp();
+    }
+
+    private void ThumbsDown()
+    {
         if (!onAttack) return;
 
         isDown = true;
         img_button.color = Color.gray;
     }
 
-    public void OnPointerUp(PointerEventData eventData)
+    private void ThumbsUp()
     {
         if (!onAttack || !isDown) return;
 
         isDown = false;
         img_button.color = Color.white;
 
-        if(!isBoost) img_chargeGauge.fillAmount = 0;
+        if (!isBoost) img_chargeGauge.fillAmount = 0;
         curChargeTime = 0;
 
         if (isFull)
@@ -100,13 +132,15 @@ public class PlayerWeaponButton : MonoBehaviour, IPointerDownHandler, IPointerUp
 
     private IEnumerator AttackCool()
     {
-        float time = 0;
+        if (weaponObj != null) weaponObj.SetActive(false);
 
+        float time = 0;
         img_coolTimeGauge.fillAmount = 0;
         onAttack = false;
 
         while (time < maxCoolTime)
         {
+
             time += Time.deltaTime;
             float t = time / maxCoolTime;
             img_coolTimeGauge.fillAmount = t;
@@ -115,5 +149,7 @@ public class PlayerWeaponButton : MonoBehaviour, IPointerDownHandler, IPointerUp
 
         img_coolTimeGauge.fillAmount = 1;
         onAttack = true;
+
+        if (weaponObj != null) weaponObj.SetActive(true);
     }
 }

@@ -11,14 +11,19 @@ public class RushMonster : MonsterBase
 {
     private bool inFrontOfPlayer;
     private bool isRush;
+    private bool realRush;
 
     [SerializeField] private Animator warningAnim;
 
     private void Update()
     {
-        if (isRush) return;
+        if (realRush)
+        {
+            transform.Translate(Vector2.left * 15 * Time.deltaTime) ;
+            return;
+        }
 
-        if(inFrontOfPlayer)
+        if(inFrontOfPlayer && !isRush)
         {
             isRush = true;
 
@@ -38,6 +43,6 @@ public class RushMonster : MonsterBase
 
         yield return new WaitForSeconds(1f);
 
-        GetComponent<Rigidbody2D>().velocity = Vector2.left * 15;
+        realRush = true;
     }
 }
