@@ -21,7 +21,7 @@ public class CameraController : MonoBehaviour
 
     private void Start()
     {
-        //SetBossCamera();
+        SetBossCamera();
     }
 
     private void LateUpdate()

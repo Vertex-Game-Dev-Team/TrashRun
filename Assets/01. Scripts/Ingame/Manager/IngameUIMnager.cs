@@ -1,8 +1,7 @@
 // # Systems
+using Newtonsoft.Json.Linq;
 using System.Collections;
-using System.Collections.Generic;
-using System.Runtime.CompilerServices;
-
+using TMPro;
 
 // # Unity
 using UnityEngine;
@@ -14,6 +13,7 @@ public class IngameUIMnager : MonoBehaviour
     [SerializeField] private PlayerWeaponButton weaponButton;
     public PlayerWeaponButton WeaponButton => weaponButton;
     private Weapon myWeapon;
+    [SerializeField] private TMP_Text txt_gaugeUpSize;
 
     private void Start()
     {
@@ -28,16 +28,25 @@ public class IngameUIMnager : MonoBehaviour
     private float curBoostValue = 0;
     private readonly float maxBoostValue = 100;
     private bool isBoost;
+    private int xValue;
 
     public void UpGaugeValue(float value)
     {
         curBoostValue += value;
         boostGauge.fillAmount = curBoostValue / maxBoostValue;
 
+        txt_gaugeUpSize.GetComponent<Animator>().SetTrigger("Play");
+        if (!isBoost)
+        {
+            xValue += 1;
+            txt_gaugeUpSize.text = "X" + xValue;
+        }
         GameManager.Instance.Player.UpSpeed(curBoostValue / maxBoostValue);
 
         if (curBoostValue >= maxBoostValue)
         {
+            txt_gaugeUpSize.text = "Fever!!";
+            xValue = 0;
             curBoostValue = maxBoostValue;
             if (!isBoost)
             {
